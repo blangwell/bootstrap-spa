@@ -8,55 +8,51 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<!-- Bootswatch Theme vvvvv -->
+	<!-- <link rel="stylesheet" href="theme.css"> -->
+	<!-- Animate CSS vvvv -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" href="style.css">
 	<title>Bootstrap Single Page Application</title>
 </head>
 
-<body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">Boontscramp SPA</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#what-we-do">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#clients">Clients</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+<body data-bs-spy="scroll" data-bs-target="#navbar-scrollspy">
+	<header class="sticky-top">
+		<nav class="navbar navbar-light bg-light px-3" id="navbar-scrollspy">
+			<a href="#hero-header" class="navbar-brand"><i class="bi bi-kanban"></i>&nbsp;SPA</a>
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="nav-item">
+					<a href="#scrollSpy1" class="nav-link">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="#scrollSpy2" class="nav-link">Clients</a>
+				</li>
+				<li class="nav-item">
+					<a href="#scrollSpy3" class="nav-link">Plans</a>
+				</li>
+			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<section class="hero-header">
-			<div class="hero-image-overlay">
-				<div class="p-5 page-title d-flex flex-column align-items-center justify-content-center">
+		<section class="hero-header" id="hero-header">
+			<div class="container-fluid hero-image-overlay">
+				<div class="page-title d-flex flex-column align-items-center p-5">
 					<div class="ceo-image-container">
 						<img src="./assets/ceo.png" alt="Our CEO" class="ceo-image">
 					</div>
 					<h1 class="display-1">Bootstrap SPA</h1>
-					<p class="h6 text-center">It's not an SPA, it's a paradigm shift.</p>
+					<p class="h6 text-center">It's not a single page application, it's a paradigm shift.</p>
 				</div>
 			</div>
 		</section>
 
 		<section id="what-we-do">
-			<div class="container p-4">
-				<h2 class="display-3 text-center">What We Do</h2>
-				<div class="row g-4 p-3 row-cols-1 row-cols-lg-3">
+			<div class="container" style="overflow: hidden;">
+				<h2 class="display-3 text-center p-5" id="scrollSpy1">What We Do</h2>
+				<div class="row g-4 row-cols-1 row-cols-lg-3  animate__animated animate__slideInUp">
 
-					<div class="what-we-do-item col d-flex align-items-start p-3">
+					<div class="what-we-do-item col d-flex align-items-start">
 						<div class="icon-square me-3">
 							<i class="bi bi-bar-chart-steps"></i>
 						</div>
@@ -67,7 +63,7 @@
 						</div>
 					</div>
 
-					<div class="what-we-do-item col d-flex align-items-start p-3">
+					<div class="what-we-do-item col d-flex align-items-start">
 						<div class="icon-square me-3">
 							<i class="bi bi-lock-fill"></i>
 						</div>
@@ -77,14 +73,13 @@
 								your organization's fortifications.</p>
 						</div>
 					</div>
-					<div class="what-we-do-item col d-flex align-items-start p-3">
+					<div class="what-we-do-item col d-flex align-items-start">
 						<div class="icon-square me-3">
 							<i class="bi bi-shield-check"></i>
 						</div>
 						<div class="what-we-do-blurb">
 							<h3>Legitimacy</h3>
-							<p>We verify the legitimacy of billions of transactions per quarter. We are a real business
-								run by real people just like you. Seriously.</p>
+							<p>We verify the legitimacy of billions of transactions per quarter. We are a real business run by real people just like you. Seriously.</p>
 						</div>
 					</div>
 				</div>
@@ -92,38 +87,38 @@
 		</section>
 
 		<section class="clients" id="clients">
-			<h2 class="display-3 text-center">What Our Clients Say</h2>
+			<h2 class="pt-5 pb-4 display-3 text-center" id="scrollSpy2">What Our Clients Say</h2>
 			<div class="container px-5">
-				<div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+				<div id="quote-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<div class="d-flex flex-column justify-content-center align-items-center py-5 client-quote"
 								id="client-quote-1">
-								<h3>TESTING ALIGNMENT</h3>
+								<h3>TESTING ALIGNMENT 1</h3>
 								<p>Alignment TESTING</p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<div class="d-flex flex-column justify-content-center align-items-center py-5 client-quote"
 								id="client-quote-2">
-								<h3>TESTING ALIGNMENT</h3>
+								<h3>TESTING ALIGNMENT 2</h3>
 								<p>Alignment TESTING</p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<div class="d-flex flex-column justify-content-center align-items-center py-5 client-quote"
 								id="client-quote-3">
-								<h3>TESTING ALIGNMENT</h3>
+								<h3>TESTING ALIGNMENT 3</h3>
 								<p>Alignment TESTING</p>
 							</div>
 						</div>
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+					<button class="carousel-control-prev" type="button" data-bs-target="#quote-carousel"
 						data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Previous</span>
 					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+					<button class="carousel-control-next" type="button" data-bs-target="#quote-carousel"
 						data-bs-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
@@ -132,14 +127,38 @@
 			</div>
 		</section>
 
-		<!-- <section class="contact container" id="contact">
-			<h2 class="display-3 text-center">Get in Touch</h2>
-			<i class="bi bi-lock-fill"></i>
-			<p>(555) 555-5555</p>
-		</section> -->
-
 		<section class="pricing container">
-			<h2 class="display-5 text-center">Plans and Pricing</h2>
+			<h2 class="pt-5 pb-3 display-3 text-center" id="scrollSpy3">Plans</h2>
+			<div class="row">
+				<div class="col">
+					<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title">Free</h5>
+							<p class="card-text">Enjoy all of the base features free for less than 4 users.</p>
+							<button class="btn btn-primary">Free</button>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title">Chaser</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, aliquam voluptatibus.</p>
+							<button class="btn btn-primary">$300/user</button>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card text-center">
+						<div class="card-body">
+							<h5 class="card-title">Orbiter</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, aliquam voluptatibus.</p>
+							<button class="btn btn-primary">$799/user</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h3 class="pt-5 pb-3 text-center animate__animated animate__slideInDown">Compare Plans</h3>
 			<table class="table text-center">
 				<thead>
 					<tr>
@@ -214,7 +233,6 @@
 				</tbody>
 			</table>
 		</section>
-
 	</main>
 
 	<footer class="container text-center">
