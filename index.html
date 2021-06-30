@@ -19,7 +19,7 @@
 <body data-bs-spy="scroll" data-bs-target="#navbar-scrollspy">
 	<header class="sticky-top">
 		<nav class="navbar navbar-light bg-light px-3" id="navbar-scrollspy">
-			<a href="#hero-header" class="navbar-brand"><i class="bi bi-kanban"></i>&nbsp;SPA</a>
+			<a href="#top" class="navbar-brand"><i class="bi bi-kanban"></i>&nbsp;SPA</a>
 			<ul class="nav nav-tabs" role="tablist">
 				<li class="nav-item">
 					<a href="#scrollSpy1" class="nav-link">About</a>
@@ -47,49 +47,56 @@
 			</div>
 		</section>
 
-		<section id="what-we-do">
-			<div class="container" style="overflow: hidden;">
-				<h2 class="display-3 text-center p-5" id="scrollSpy1">What We Do</h2>
-				<div class="row g-4 row-cols-1 row-cols-lg-3  animate__animated animate__slideInUp">
+		<section class="container pb-5" id="what-we-do" style="overflow: hidden;">
+			<h2 class="display-3 text-center p-5" id="scrollSpy1">What We Do</h2>
 
-					<div class="what-we-do-item col d-flex align-items-start">
-						<div class="icon-square me-3">
-							<i class="bi bi-bar-chart-steps"></i>
-						</div>
-						<div class="what-we-do-blurb">
-							<h3>Progress</h3>
-							<p>We disrupt stagnation through a metrics based approach to growth. We make your data make
-								sense, forcefully if necessary.</p>
-						</div>
-					</div>
+			<div class="row g-4 px-4 animate__animated animate__slideInUp">
 
-					<div class="what-we-do-item col d-flex align-items-start">
-						<div class="icon-square me-3">
-							<i class="bi bi-lock-fill"></i>
-						</div>
-						<div class="what-we-do-blurb">
-							<h3>Safety</h3>
-							<p>We promote security culture and stay on the cutting edge of data encryption. Supercharge
-								your organization's fortifications.</p>
-						</div>
+				<div class="what-we-do-item col-sm-12 col-md-4 d-flex align-items-start">
+					<div class="icon-square me-3">
+						<i class="bi bi-bar-chart-steps"></i>
 					</div>
-					<div class="what-we-do-item col d-flex align-items-start">
-						<div class="icon-square me-3">
-							<i class="bi bi-shield-check"></i>
-						</div>
-						<div class="what-we-do-blurb">
-							<h3>Legitimacy</h3>
-							<p>We verify the legitimacy of billions of transactions per quarter. We are a real business run by real people just like you. Seriously.</p>
-						</div>
+					<div class="what-we-do-blurb">
+						<h3>Progress</h3>
+						<p>We disrupt stagnation through a metrics based approach to growth. We make your data make
+							sense, forcefully if necessary.</p>
 					</div>
 				</div>
+
+				<div class="what-we-do-item col-sm-12 col-md-4 d-flex align-items-start">
+					<div class="icon-square me-3">
+						<i class="bi bi-lock-fill"></i>
+					</div>
+					<div class="what-we-do-blurb">
+						<h3>Safety</h3>
+						<p>We promote security culture and stay on the cutting edge of data encryption. Supercharge
+							your organization's fortifications.</p>
+					</div>
+				</div>
+
+				<div class="what-we-do-item col-sm-12 col-md-4 d-flex align-items-start">
+					<div class="icon-square me-3">
+						<i class="bi bi-shield-check"></i>
+					</div>
+					<div class="what-we-do-blurb">
+						<h3>Legitimacy</h3>
+						<p>We verify the legitimacy of billions of transactions per quarter. We are a real business run by real people just like you. Seriously.</p>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
-		<section class="clients" id="clients">
-			<h2 class="pt-5 pb-4 display-3 text-center" id="scrollSpy2">What Our Clients Say</h2>
-			<div class="container px-5">
+		<section class="clients container-fluid pt-5 pb-5" id="clients">
+			<h2 class="display-3 text-center pb-4" id="scrollSpy2">What Our Clients Say</h2>
+
+			<div class="carousel-container container px-5">
 				<div id="quote-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#quote-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#quote-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#quote-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					  </div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<div class="d-flex flex-column justify-content-center align-items-center py-5 client-quote"
@@ -113,53 +120,43 @@
 							</div>
 						</div>
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#quote-carousel"
-						data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#quote-carousel"
-						data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
 				</div>
 			</div>
 		</section>
 
 		<section class="pricing container">
 			<h2 class="pt-5 pb-3 display-3 text-center" id="scrollSpy3">Plans</h2>
-			<div class="row">
-				<div class="col">
-					<div class="card text-center">
+			<div class="row g-4">
+				<div class="col-md-4 col-sm-12">
+					<div class="card text-center py-5">
 						<div class="card-body">
-							<h5 class="card-title">Free</h5>
-							<p class="card-text">Enjoy all of the base features free for less than 4 users.</p>
-							<button class="btn btn-primary">Free</button>
+							<h3 class="h2 card-title">Free</h3>
+							<p class="card-text">Enjoy all of the base features free for 4 users per month.</p>
+							<button class="btn btn-primary">Free for 4 Users</button>
 						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card text-center">
+				<div class="col-md-4 col-sm-12">
+					<div class="card text-center py-5">
 						<div class="card-body">
-							<h5 class="card-title">Chaser</h5>
+							<h3 class="h2 card-title">Chaser</h3>
 							<p class="card-text">Lorem ipsum dolor sit amet, aliquam voluptatibus.</p>
 							<button class="btn btn-primary">$300/user</button>
 						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="card text-center">
+				<div class="col-md-4 col-sm-12">
+					<div class="card text-center py-5">
 						<div class="card-body">
-							<h5 class="card-title">Orbiter</h5>
+							<h3 class="h2 card-title">Orbiter</h3>
 							<p class="card-text">Lorem ipsum dolor sit amet, aliquam voluptatibus.</p>
 							<button class="btn btn-primary">$799/user</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<h3 class="pt-5 pb-3 text-center animate__animated animate__slideInDown">Compare Plans</h3>
-			<table class="table text-center">
+			<h3 class="pt-4 pb-3 text-center animate__animated animate__slideInDown">Compare Plans</h3>
+			<table class="table text-center mb-5">
 				<thead>
 					<tr>
 						<th style="width: 34%;"></th>
@@ -233,9 +230,22 @@
 				</tbody>
 			</table>
 		</section>
+
+		<section class="contact container-fluid py-3">
+			<div class="row">
+				<div class="col">
+					<p><i class="bi bi-telephone-fill"></i> (555) 555-5555</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<p><i class="bi bi-envelope-fill"></i> inquiries@bootstrapspa.biz </p>
+				</div>
+			</div>
+		</section>
 	</main>
 
-	<footer class="container text-center">
+	<footer class="container-fluid pt-3 d-flex align-items-center justify-content-center ">
 		<p>&copy; Barent Langwell 2021</p>
 		<!-- add github/portfolio links -->
 	</footer>

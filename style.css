@@ -1,4 +1,4 @@
-.hero-header, .clients {
+.hero-header {
   /* parallax effect */
   background-size: cover;
   background-attachment: fixed;
@@ -50,4 +50,13 @@ i {
 .client-quote {
   height: 400px;
   background-color: rgba(0, 0, 0, .6);
+}
+
+.contact, .clients {
+  background-color: darkcyan;
+}
+
+footer {
+  background-color: black;
+  color: beige;
 }
