@@ -16,7 +16,7 @@
 	<title>Bootstrap Single Page Application</title>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar-scrollspy">
+<body data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-offset="100">
 	<header class="sticky-top">
 		<nav class="navbar navbar-light bg-light px-3" id="navbar-scrollspy">
 			<a href="#top" class="navbar-brand"><i class="bi bi-kanban"></i>&nbsp;SPA</a>
@@ -47,7 +47,7 @@
 			</div>
 		</section>
 
-		<section class="container pb-5" id="what-we-do" style="overflow: hidden;">
+		<section class="container" id="what-we-do" style="overflow: hidden;">
 			<h2 class="display-3 text-center p-5" id="scrollSpy1">What We Do</h2>
 
 			<div class="row g-4 px-4 animate__animated animate__slideInUp">
@@ -87,11 +87,12 @@
 			</div>
 		</section>
 
-		<section class="clients container-fluid pt-5 pb-5" id="clients">
-			<h2 class="display-3 text-center pb-4" id="scrollSpy2">What Our Clients Say</h2>
+		<section class="clients container-fluid p-5" id="clients">
+			<h2 class="display-3 text-center pt-5 pb-4" id="scrollSpy2">What Our Clients Say</h2>
 
 			<div class="carousel-container container px-5">
-				<div id="quote-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+				<div id="quote-carousel" class="carousel carousel-light slide" data-bs-ride="carousel">
+					<div class="overlay"></div>
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#quote-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 						<button type="button" data-bs-target="#quote-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -99,24 +100,30 @@
 					  </div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<div class="d-flex flex-column justify-content-center align-items-center py-5 client-quote"
+							<div class=" client-quote"
 								id="client-quote-1">
-								<h3>TESTING ALIGNMENT 1</h3>
-								<p>Alignment TESTING</p>
+								<div class="carousel-slide-overlay d-flex flex-column justify-content-center align-items-center p-5">
+									<h4>"Since partering with SPA our churn metrics are down 2%."</h4>
+									<h5><em>- Jakobin Pierson, CEO of Pierson Holdings</em></h5>
+								</div>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="d-flex flex-column justify-content-center align-items-center py-5 client-quote"
+							<div class="client-quote"
 								id="client-quote-2">
-								<h3>TESTING ALIGNMENT 2</h3>
-								<p>Alignment TESTING</p>
+								<div class="carousel-slide-overlay d-flex flex-column justify-content-center align-items-center  p-5">
+									<h4>"I had never disruped a paradigm. SPA made it easy."</h4>
+									<h5><em>- Marshall Andrewson, Founder of JWB Inc.</em></h5>
+								</div>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<div class="d-flex flex-column justify-content-center align-items-center py-5 client-quote"
+							<div class="client-quote"
 								id="client-quote-3">
-								<h3>TESTING ALIGNMENT 3</h3>
-								<p>Alignment TESTING</p>
+								<div class="carousel-slide-overlay d-flex flex-column justify-content-center align-items-center  p-5">
+									<h4>"SPA gave me control of my users' data for better or for worse."</h4>
+									<h5><em>- Jerry Jankowitz, CTO of Pathmaster</em></h5>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -155,8 +162,8 @@
 					</div>
 				</div>
 			</div>
-			<h3 class="pt-4 pb-3 text-center animate__animated animate__slideInDown">Compare Plans</h3>
-			<table class="table text-center mb-5">
+			<h3 class="pt-5 pb-3 text-center animate__animated animate__slideInDown">Compare Plans</h3>
+			<table class="table text-center mb-5 px-5">
 				<thead>
 					<tr>
 						<th style="width: 34%;"></th>
