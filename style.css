@@ -69,6 +69,15 @@ i {
   background-color: #8b9dc3;
 }
 
+.skill-icon {
+  font-size: 40px;
+  transition: color .5s linear;
+}
+.skill-icon:hover {
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
 
 footer {
   background-color: black;
